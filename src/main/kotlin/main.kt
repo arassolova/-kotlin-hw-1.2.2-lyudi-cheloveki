@@ -16,9 +16,8 @@ fun main() {
 private fun printLikes(likes: Int) {
     val result10 = likes % 10
     val result100 = likes % 100
-    if (result10 == 1) {
-        if (result100 == 11) println("Понравилось $likes людям")
-        else println("Понравилось $likes человеку")
+    if (result10 == 1 && result100 != 11) {
+        println("Понравилось $likes человеку")
     } else {
         println("Понравилось $likes людям")
     }
